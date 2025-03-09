@@ -1,0 +1,142 @@
+<!--
+Nama    : Haryo Wicaksono
+Nim     : 2300078
+Kelas   : RPL 4A
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .register-container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 350px;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        .register-container label {
+            display: block;
+            text-align: left;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="radio"] {
+            width: auto;
+            margin-right: 5px;
+        }
+
+        .radio-group {
+            display: flex;
+            justify-content: start;
+            gap: 10px;
+            margin-top: 5px;
+        }
+
+        .register-button {
+            width: 100%;
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .register-button:hover {
+            background: #0056b3;
+        }
+
+        .login-link {
+            margin-top: 15px;
+            display: block;
+            font-size: 14px;
+        }
+
+        .login-link a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="register-container">
+        <h2>Register</h2>
+        <form action="#" method="post" enctype="multipart/form-data">
+            
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="photo">Foto:</label>
+            <input type="file" id="photo" name="photo" required>
+
+            <label>Jenis Kelamin:</label>
+            <div class="radio-group">
+                <input type="radio" name="gender" value="male" required> Laki-laki
+                <input type="radio" name="gender" value="female" required> Perempuan
+            </div>
+
+            <label for="user_status">Status Pengguna:</label>
+            <select id="user_status" name="user_status" required>
+                <option value="">Pilih</option>
+                <option value="new">Pengguna Baru</option>
+                <option value="existing">Pengguna Lama</option>
+            </select>
+
+            <label for="address">Alamat:</label>
+            <textarea id="address" name="address" rows="3" required></textarea>
+
+            <button type="submit" class="register-button">Register</button>
+
+            <p class="login-link">Sudah punya akun? <a href="login_baru.html">Login di sini</a></p>
+        </form>
+    </div>
+
+</body>
+</html>
